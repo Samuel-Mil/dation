@@ -24,4 +24,9 @@ class CreateFileController extends Controller
             return redirect()->route('list-files-page');
         }
     }
+
+    public function show(Request $request, $id){
+        $file = Files::find($id);
+        return view('file', ['file'=>$file]);
+    }
 }

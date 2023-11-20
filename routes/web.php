@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login-page');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login-page');
@@ -36,6 +36,8 @@ Route::post('/update-user', [UpdateUserController::class, 'update'])->name('upda
 
 Route::get('/create-file', [CreateFileController::class, 'index'])->name('create-file-page');
 Route::post('/create-file', [CreateFileController::class, 'create'])->name('create-file');
+
+Route::get('/show-file/{id}', [CreateFileController::class, 'show'])->name('show-file');
 
 Route::get('/list-files', [ListFilesController::class, 'index'])->name('list-files-page');
 

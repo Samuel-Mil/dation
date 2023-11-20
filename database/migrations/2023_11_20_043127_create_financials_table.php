@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('financials', function (Blueprint $table) {
             $table->id();
             $table->string('date');
-            $table->string('description');
+            $table->text('description');
             $table->string('price');
             $table->timestamps();
         });

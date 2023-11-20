@@ -1,0 +1,28 @@
+.page{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file{
+    width: 990px;
+    height: 100%;
+    padding: 10px;
+    background-color: #6E4474;
+}
+
+.file h1{
+    color: #fff;
+    text-align: center;
+}
+
+.file h1 > span{
+    font-size: 20px;
+}
+
+.file p{
+    color: #fff;
+    margin-top: 10px;
+}

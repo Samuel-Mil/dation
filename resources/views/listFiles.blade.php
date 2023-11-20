@@ -12,7 +12,7 @@
         <div class="list-single">
             <p>{{date('d/m', strtotime($file['date']))}}</p>
             <div class="box">
-                <p>{{$file['title']}}</p>
+                <p><a href="{{route('show-file',$file['id'])}}">{{$file['title']}}</a></p>
             </div>
         </div><!--list-single-->
         @endforeach

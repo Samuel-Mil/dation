@@ -25,7 +25,7 @@ class LoginController extends Controller
         $user = User::where('email', $data['email'])->first();
 
         // Validar senha 
-        if(!$user){
+        if(!$user || !Hash::check($data['password'], $user['password'])){
             return redirect()->route('register-page');
         }
 
